@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<!--
+    File: /domenic_ruocco_hw7/index.html
+    Assignment: HW6
+    Domenic Ruocco, UML Comp Sci, druocco@cs.uml.edu
+    Course: 91.61 GUI Programming I
+    Copyright (c) 2020 by Domenic Ruocco. All rights reserved.
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel = "stylesheet" href = "./css/style.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <title>
+            Homework #6
+        </title>
+    </head>
+    <body>
+        <form id="InputForm">
+            <label for="MinCol">Min/Max Column Value</label>
+            <input type="number" onClick="this.select();" id="MinCol" name="MinCol" value="1">
+            <input type="number" onClick="this.select();" id="MaxCol" name="MaxCol" value="10">
+            <div id="MinMaxColSlider" name="MinMaxColSlider"></div>
+            <label for="MinRow">Min/Max Row Value</label>
+            <input type="number" onClick="this.select();" id="MinRow" name="MinRow" value="1">
+            <input type="number" onClick="this.select();" id="MaxRow" name="MaxRow" value="10">
+            <div id="MinMaxRowSlider" name="MinMaxRowSlider"></div>
+            <button type="button" id="Submit"> Create Table </button>
+        </form>
+
+        <form id="TabsForm">
+            <button type="button" id="DelSelected">Delete Selected</button>
+        </form>
+
+        <div id="tabs" >
+            <ul>
+                <li>
+                    <a href="#tabs-1">Table 1</a> 
+                    <span class="ui-icon ui-icon-close">X</span> 
+                    <input type="checkbox" id="tabs-1-close">
+                </li>
+            </ul>
+        
+            <div id="tabs-1">
+                <table>
+                    <tbody id="MultTable-1" data-range1='1' data-range2='10' data-range3='1' data-range4='10' ></tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
